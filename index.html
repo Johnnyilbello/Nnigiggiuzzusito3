@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    
+    <!-- SEO PRIMARY -->
+    <title>Nni Giggiuzzu | Hamburgeria & Macelleria Cinisi | Asporto e Domicilio</title>
+    <meta name="description" content="La vera Hamburgeria Artigianale a Cinisi. Carne locale dalla nostra Macelleria, zero intermediari. Ordina online panini, fritti e grigliate. Consegna a domicilio a Cinisi e Terrasini." />
+    <meta name="keywords" content="cibo asporto cinisi, hamburgeria cinisi, macelleria cinisi, panini domicilio terrasini, nni giggiuzzu, street food cinisi, carne locale" />
+    <meta name="author" content="Nni Giggiuzzu" />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#F97316" />
+
+    <!-- OPEN GRAPH / FACEBOOK / WHATSAPP -->
+    <meta property="og:type" content="restaurant.restaurant" />
+    <meta property="og:url" content="https://nnigiggiuzzu.it/" />
+    <meta property="og:title" content="Nni Giggiuzzu | Dalla Macelleria alla Piastra" />
+    <meta property="og:description" content="Ordina online i migliori hamburger di Cinisi. Carne locale, ingredienti freschi e consegna a domicilio." />
+    <meta property="og:image" content="https://images.unsplash.com/photo-1550547660-d9450f859349?q=80&w=1200&auto=format&fit=crop" />
+    <meta property="og:locale" content="it_IT" />
+
+    <!-- STRUCTURED DATA (JSON-LD) - IL SEGRETO PER RANKARE SU GOOGLE MAPS -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Restaurant",
+      "name": "Nni Giggiuzzu",
+      "image": [
+        "https://images.unsplash.com/photo-1594212699903-ec8a3eca50f5?q=80&w=1200&auto=format&fit=crop"
+      ],
+      "@id": "https://nnigiggiuzzu.it",
+      "url": "https://nnigiggiuzzu.it",
+      "telephone": "+393331234567",
+      "menu": "https://nnigiggiuzzu.it/#menu",
+      "servesCuisine": ["Hamburger", "Siciliana", "Barbecue", "Street Food"],
+      "priceRange": "€",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Corso Umberto I, 177",
+        "addressLocality": "Cinisi",
+        "addressRegion": "PA",
+        "postalCode": "90045",
+        "addressCountry": "IT"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 38.1633, 
+        "longitude": 13.1019
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Wednesday", "Thursday", "Friday", "Saturday", "Sunday", "Monday"],
+          "opens": "11:00",
+          "closes": "03:30"
+        }
+      ],
+      "sameAs": [
+        "https://www.facebook.com/nnigiggiuzzu",
+        "https://www.instagram.com/nnigiggiuzzu"
+      ],
+      "potentialAction": {
+        "@type": "OrderAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://nnigiggiuzzu.it/#menu",
+          "inLanguage": "it-IT",
+          "actionPlatform": [
+            "http://schema.org/DesktopWebPlatform",
+            "http://schema.org/IOSPlatform",
+            "http://schema.org/AndroidPlatform"
+          ]
+        },
+        "deliveryMethod": [
+          "http://purl.org/goodrelations/DeliveryModeOwnFleet",
+          "http://purl.org/goodrelations/DeliveryModePickUp"
+        ]
+      }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ButcherShop",
+      "name": "Macelleria Nni Giggiuzzu",
+      "parentOrganization": {
+        "@type": "Restaurant",
+        "name": "Nni Giggiuzzu"
+      },
+      "description": "Macelleria storica di Cinisi con carne locale a km zero."
+    }
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;600&family=Inter:wght@200;300;400&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              display: ['Oswald', 'sans-serif'],
+            },
+            colors: {
+              brand: {
+                orange: '#F97316', // Orange-500
+                dark: '#050505',   // Almost Pure Black
+                light: '#E5E5E5',  // Light Gray
+                accent: '#EAB308', // Yellow-500
+              }
+            },
+            animation: {
+              'ken-burns': 'kenBurns 30s ease-out infinite alternate',
+              'fade-up-slow': 'fadeUp 1.5s ease-out forwards',
+              'reveal-text': 'revealText 1.5s cubic-bezier(0.77, 0, 0.175, 1) forwards',
+              'ember': 'emberRise linear infinite',
+              'fade-in': 'fadeIn 0.5s ease-out forwards',
+              'fade-in-up': 'fadeInUp 0.5s ease-out forwards',
+              'fade-in-right': 'fadeInRight 0.5s ease-out forwards',
+              'bounce': 'bounce 1s infinite',
+              'pulse': 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+              'color-cycle': 'colorCycle 8s infinite alternate',
+              'spin-slow': 'spin 4s linear infinite',
+              'marquee': 'marquee 25s linear infinite',
+            },
+            keyframes: {
+              kenBurns: {
+                '0%': { transform: 'scale(1) translate(0, 0)' },
+                '100%': { transform: 'scale(1.10) translate(-1%, -1%)' },
+              },
+              fadeUp: {
+                '0%': { opacity: '0', transform: 'translateY(30px)' },
+                '100%': { opacity: '1', transform: 'translateY(0)' },
+              },
+              revealText: {
+                '0%': { transform: 'translateY(110%)' },
+                '100%': { transform: 'translateY(0)' },
+              },
+              emberRise: {
+                '0%': { transform: 'translateY(100vh) scale(0)', opacity: '0' },
+                '20%': { opacity: '0.8' },
+                '100%': { transform: 'translateY(-20vh) scale(1)', opacity: '0' },
+              },
+              fadeIn: {
+                '0%': { opacity: '0' },
+                '100%': { opacity: '1' },
+              },
+              fadeInUp: {
+                '0%': { opacity: '0', transform: 'translateY(20px)' },
+                '100%': { opacity: '1', transform: 'translateY(0)' },
+              },
+              fadeInRight: {
+                '0%': { opacity: '0', transform: 'translateX(-20px)' },
+                '100%': { opacity: '1', transform: 'translateX(0)' },
+              },
+              colorCycle: {
+                '0%': { color: '#F97316' }, /* Orange */
+                '25%': { color: '#EF4444' }, /* Red */
+                '50%': { color: '#A855F7' }, /* Purple */
+                '75%': { color: '#EAB308' }, /* Yellow */
+                '100%': { color: '#F97316' },
+              },
+              marquee: {
+                '0%': { transform: 'translateX(0)' },
+                '100%': { transform: 'translateX(-100%)' },
+              }
+            }
+          },
+        },
+      }
+    </script>
+    <style>
+      html {
+        scroll-behavior: smooth;
+        background-color: #000;
+        -webkit-tap-highlight-color: transparent;
+      }
+      /* Hide scrollbar globally for cinematic feel */
+      ::-webkit-scrollbar {
+        width: 0px;
+        background: transparent;
+      }
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+      
+      /* Cinematic Vignette - REDUCED OPACITY */
+      .cinematic-vignette {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: radial-gradient(circle, transparent 50%, rgba(0,0,0,0.3) 100%);
+        pointer-events: none;
+        z-index: 9000;
+      }
+
+      /* Film Grain - Finer grain */
+      .film-grain {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        z-index: 8999;
+        opacity: 0.05;
+        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+      }
+
+      .ember {
+        position: absolute;
+        bottom: -10px;
+        width: 2px;
+        height: 2px;
+        background: #F97316; /* Brand Orange */
+        border-radius: 50%;
+        box-shadow: 0 0 6px #F97316;
+      }
+      
+      /* Safe Area for Mobile */
+      .pb-safe {
+        padding-bottom: env(safe-area-inset-bottom);
+      }
+      .pt-safe {
+          padding-top: env(safe-area-inset-top);
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "lucide-react": "https://esm.sh/lucide-react@^0.561.0",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom": "https://esm.sh/react-dom@^19.2.3",
+    "framer-motion": "https://esm.sh/framer-motion@11.16.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-black text-brand-light antialiased overflow-x-hidden">
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
